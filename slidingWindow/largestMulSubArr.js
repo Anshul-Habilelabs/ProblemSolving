@@ -10,19 +10,5 @@ const mulSubArr = (arr, k) => {
             count++;
         }
     }
-    let start = 0;
-    let startPlusOne = 1;
-    while (startPlusOne < length) {
-        if (arr[start] * arr[startPlusOne] < k) {
-            count++;
-            startPlusOne++;
-        }
-        if (arr[start] * arr[startPlusOne] >= k) {
-            start++;
-            startPlusOne = start + 1;
-        }
-    }
-    return count;
 }
-
 console.log(mulSubArr(arr, k));
